@@ -1,0 +1,63 @@
+﻿@model IEnumerable<QLBanNongSan.Models._Admin>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+    ViewBag.title = "Tài khoản - ";
+}
+    @foreach (var item in Model)
+    {
+        <div class="row bg-body">
+            <div class="col-6">
+                <img src="~/Public/Images/user-512.jpg" style="width: max-content; height: auto; object-fit:cover;" />
+            </div>
+            <div class="col-6">
+                <div class="mx-3 text-center">
+                    <h3>Thông tin tài khoản</h3>
+                    <hr />
+                    <h4>Tên đăng nhập: @Html.DisplayFor(modelItem => item.ten_dang_nhap)</h4>
+                    <hr />
+                    <p>Email: @Html.DisplayFor(modelItem => item.email)</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Chỉnh sửa
+                    </button>
+                    <p class="text-danger">@ViewBag.Error</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Modal -->
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    @using (Html.BeginForm())
+                    {
+                        //@Html.AntiForgeryToken()
+                        <div class="modal-body">
+
+                            <div>
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input class="form-control" id="cfPassword" type="password" name="cfPassword" placeholder="Xác nhận mật khẩu của bạn" required/>
+                                    <label for="cfPassword">Xác nhận mật khẩu của bạn</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+                            <input type="submit" value="Xác nhận" class="btn btn-outline-primary" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-outline-dark" href="@Url.Action("Index", "BaseAdmin")">Quay lại</a>
+        break;
+    }

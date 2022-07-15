@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="back_re">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Chi tiết sản phẩm</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container justify-content-center mt-5">
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <img class="shadow" src="~/Public/Images/@Model.hinh_anh" style="width: 100%; height: auto; object-fit: cover;" />
+        </div>
+        <div class="col-md-7 col-sm-12 text-center d-flex flex-column justify-content-around">
+            <h2>@Model.ten_san_pham</h2>
+            <p class="text-danger fw-bold"> <span class="price">@Model.gia.ToString("#,##")</span> / <span>@Model.don_vi_tinh</span></p>
+            <p class="text-center d-flex justify-content-between">
+                <a class="btn btn-outline-success" href="@Url.Action("AddToCart", "GioHang", new {id = Model.ma_san_pham }, null)" style="width: fit-content">Thêm vào giỏ hàng</a>
+                <a class="btn btn-outline-dark" href="@Url.Action("Index", "SanPham")" style="width: fit-content">Quay lại</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .price:after {
+        content: "\20AB";
+    }   
+</style>

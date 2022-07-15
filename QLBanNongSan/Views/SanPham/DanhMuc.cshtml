@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Danh mục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="back_re">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Danh mục @ViewBag.loai.ten_loai</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row ">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div id="ho_bo" class="our_products text-center">
+                    <div class="product">
+                        <figure><img src="~/Public/Images/@item.hinh_anh" alt="#" style="width: 270px; height: 210px; object-fit: cover" /></figure>
+                    </div>
+                    <h3>@item.ten_san_pham</h3>
+                    <span>@item.gia</span>
+                    <p>
+                        <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
+                        <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
+                    </p>
+                </div>
+            </div>
+        }
+    <p class="text-center text-danger"> @ViewBag.empty</p>
+    </div>
+</div>

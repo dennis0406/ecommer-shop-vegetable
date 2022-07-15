@@ -1,0 +1,55 @@
+﻿@model QLBanNongSan.Models.San_pham
+@using QLBanNongSan.Models;
+
+@{
+    ViewBag.Title = "Thêm mới SP - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1 class="mt-4">Thêm mới sản phẩm </h1>
+
+@using (Html.BeginForm("ThemMoi", "QLSanPham", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-6">
+            <img src="~/Public/Images/edit.png" />
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="txtTen" name="TenSP" type="text" placeholder="Tên sản phẩm" required />
+                <label for="txtTen">Tên sản phẩm</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="HinhAnh" name="HinhAnh" type="file" placeholder="Hình ảnh" required accept="image/*" />
+                <label for="HinhAnh"></label>
+            </div>
+            <div class="form-floating mb-3 d-block position-relative">
+                Loại nông sản: &nbsp;
+                @Html.DropDownList("ma_nong_san")
+
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="Gia" name="Gia" type="text" placeholder="Giá bán" required />
+                <label for="Gia">Giá bán</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="DonVi" name="DonViTinh" type="text" placeholder="Đơn vị tính" required />
+                <label for="DonVi">Đơn vị tính</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="Soluong" name="Soluong" type="number" placeholder="Số lượng" required />
+                <label for="Soluong">Số lượng</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control btn btn-outline-primary w-25 d-block" type="submit" value="Thêm" />
+                <p class="text-danger">@ViewBag.Error</p>
+
+            </div>
+        </div>
+    </div>
+}
+
+<div class="mt-4">
+    <a class="btn btn-outline-dark" href="@Url.Action("ChinhSua")">Quay lại</a>
+</div>

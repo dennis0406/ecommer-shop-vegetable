@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNONGSAN" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PNVD176\DENNISLAP;Initial Catalog=QLNONGSAN;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLNONGSANConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[_Admin]" Member="_Admins">
+    <Type Name="_Admin">
+      <Column Name="ma_admin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_dang_nhap" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mat_khau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_hoa_don" Member="CT_hoa_dons">
+    <Type Name="CT_hoa_don">
+      <Column Name="ma_CT_hoa_don" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_san_pham" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_hoa_don" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanh_tien" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Hoa_don_CT_hoa_don" Member="Hoa_don" ThisKey="ma_hoa_don" OtherKey="ma_hoa_don" Type="Hoa_don" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="San_pham_CT_hoa_don" Member="San_pham" ThisKey="ma_san_pham" OtherKey="ma_san_pham" Type="San_pham" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hoa_don" Member="Hoa_dons">
+    <Type Name="Hoa_don">
+      <Column Name="ma_hoa_don" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngay_dat_hang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tong" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="trang_thai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="phi_van_chuyen" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Hoa_don_CT_hoa_don" Member="CT_hoa_dons" ThisKey="ma_hoa_don" OtherKey="ma_hoa_don" Type="CT_hoa_don" />
+      <Association Name="Khach_hang_Hoa_don" Member="Khach_hang" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Khach_hang" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Khach_hang" Member="Khach_hangs">
+    <Type Name="Khach_hang">
+      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mat_khau" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_khach_hang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_dien_thoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Khach_hang_Hoa_don" Member="Hoa_dons" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Hoa_don" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Loai_nong_san" Member="Loai_nong_sans">
+    <Type Name="Loai_nong_san">
+      <Column Name="ma_nong_san" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_loai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Loai_nong_san_San_pham" Member="San_phams" ThisKey="ma_nong_san" OtherKey="ma_nong_san" Type="San_pham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.San_pham" Member="San_phams">
+    <Type Name="San_pham">
+      <Column Name="ma_san_pham" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_san_pham" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hinh_anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ma_nong_san" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="don_vi_tinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngay_them" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="San_pham_CT_hoa_don" Member="CT_hoa_dons" ThisKey="ma_san_pham" OtherKey="ma_san_pham" Type="CT_hoa_don" />
+      <Association Name="Loai_nong_san_San_pham" Member="Loai_nong_san" ThisKey="ma_nong_san" OtherKey="ma_nong_san" Type="Loai_nong_san" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

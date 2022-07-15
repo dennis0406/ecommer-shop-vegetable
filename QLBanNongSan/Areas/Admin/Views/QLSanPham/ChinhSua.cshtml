@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "QL Sản phẩm - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-uppercase">Trang quản lý sản phẩm</h2>
+
+<a class="btn btn-outline-primary" href="@Url.Action("ThemMoi")">Thêm mới sản phẩm</a>
+
+<div class="card-body">
+    <table id="datatablesSimple" class="text-center">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Loại nông sản</th>
+                <th>Giá sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Ngày thêm</th>
+                <th>Sửa | Xóa</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Loại nông sản</th>
+                <th>Giá sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Ngày thêm</th>
+                <th>Sửa | Xóa</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach (var sanpham in Model)
+            {
+                string loai = " ";
+                foreach (var item in ViewBag.loaiNS)
+                {
+                    if(item.ma_nong_san == sanpham.ma_nong_san)
+                    {
+                        loai = item.ten_loai;
+                        break;
+                    }
+                }
+
+            <tr>
+
+                <td>
+                    @sanpham.ten_san_pham
+                </td>
+                <td>
+                    <img src="~/Public/Images/@sanpham.hinh_anh" style="width: 150px; height: 100px; object-fit: cover" />
+                </td>
+                <td>
+                    @loai
+                </td>
+                <td class="price">
+                    @sanpham.gia
+                </td>
+                <td>
+                    @sanpham.so_luong
+                </td>
+                <td>
+                    @String.Format("{0:d/M/yyyy}", @sanpham.ngay_them)
+                </td>
+                <td>
+
+                    <a class="btn btn-outline-primary" href="/Admin/QLSanPham/SuaSanPham/@sanpham.ma_san_pham">Sửa</a> <a class="mx-3 btn btn-outline-danger" href="/Admin/QLSanPham/XoaSanPham/@sanpham.ma_san_pham">Xóa</a>
+                    
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

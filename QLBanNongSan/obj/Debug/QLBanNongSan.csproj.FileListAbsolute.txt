@@ -1,0 +1,225 @@
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.dll.config
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.pdb
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.exe
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.exe.config
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.rsp
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.exe
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.exe.config
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.rsp
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.AppContext.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Collections.Immutable.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Console.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Globalization.Calendars.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Http.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Sockets.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Reflection.Metadata.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.ValueTuple.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.exe
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.exe.config
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.rsp
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler.exe
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler.exe.config
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Antlr3.Runtime.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Microsoft.Web.Infrastructure.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Newtonsoft.Json.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Helpers.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Mvc.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Optimization.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Razor.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Deployment.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Razor.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\WebGrease.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Helpers.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Mvc.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Optimization.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.Razor.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Deployment.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Razor.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Newtonsoft.Json.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Antlr3.Runtime.pdb
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.AssemblyReference.cache
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.CoreCompileInputs.cache
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.CopyComplete
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.pdb
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\EntityFramework.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\EntityFramework.SqlServer.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\EntityFramework.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\EntityFramework.SqlServer.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\PagedList.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\PagedList.Mvc.dll
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\PagedList.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\PagedList.Mvc.xml
+C:\Lập\C#\QLBanNongSan\QLBanNongSan\bin\FormatLibrary.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.dll.config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\QLBanNongSan.pdb
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc(1).exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc(1).rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.exe(1).config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.exe.config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csc.rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi(1).exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi(1).rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.exe(1).config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.exe.config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\csi.rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.Scripting(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.CSharp.Core.targets(1)
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.x86(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Managed.Core.targets(1)
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.VisualBasic.Core.targets(1)
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Win32.Primitives(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.AppContext(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.AppContext.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Collections.Immutable(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Collections.Immutable.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Console(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Console.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.DiagnosticSource(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.FileVersionInfo(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.StackTrace(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Globalization.Calendars(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Globalization.Calendars.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression.ZipFile(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem.Primitives(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Http(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Http.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Sockets(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Net.Sockets.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Reflection.Metadata(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Reflection.Metadata.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Algorithms(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Encoding(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Primitives(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.X509Certificates(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Text.Encoding.CodePages(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Threading.Tasks.Extensions(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.ValueTuple(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.ValueTuple.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.ReaderWriter(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XmlDocument(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath.XDocument(1).dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc(1).exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc(1).rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.exe(1).config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.exe.config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\vbc.rsp
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler(1).exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler.exe
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler.exe(1).config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\roslyn\VBCSCompiler.exe.config
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Antlr3.Runtime.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\EntityFramework.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\EntityFramework.SqlServer.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\FormatLibrary.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Microsoft.Web.Infrastructure.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Newtonsoft.Json.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\PagedList.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\PagedList.Mvc.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Helpers.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Mvc.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Optimization.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Razor.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Deployment.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Razor.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\WebGrease.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\EntityFramework.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\EntityFramework.SqlServer.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\PagedList.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\PagedList.Mvc.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Helpers.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Mvc.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Optimization.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.Razor.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Deployment.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\System.Web.WebPages.Razor.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Newtonsoft.Json.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Antlr3.Runtime.pdb
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.AssemblyReference.cache
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.CoreCompileInputs.cache
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.csproj.CopyComplete
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.dll
+D:\Asp.net mvc\QLBanNongSan-20220517T044140Z-001\QLBanNongSan\QLBanNongSan\obj\Debug\QLBanNongSan.pdb

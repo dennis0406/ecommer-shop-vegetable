@@ -1,0 +1,46 @@
+﻿@model QLBanNongSan.Models._Admin
+
+@{
+    ViewBag.Title = "Chỉnh sửa tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Chỉnh sửa thông tin Admin</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <hr />
+    <div class="form-floating mb-3">
+        <input class="form-control" id="txtTen" name="txtTen" type="text" placeholder="Nhập tên đăng nhập" required/>
+        <label for="txtTen">Nhập tên đăng nhập</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="txtEmail" name="txtEmail" type="email" placeholder="Nhập email" required/>
+        <label for="txtEmail">Nhập email</label>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-floating mb-3 mb-md-0">
+                <input class="form-control" id="inputPassword" name="txtMatKhau" type="password" placeholder="Nhập mật khẩu" required/>
+                <label for="inputPassword">Nhập mật khẩu</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating mb-3 mb-md-0">
+                <input class="form-control" id="inputPasswordConfirm" name="txtPasswordCF" type="password" placeholder="Nhập lại mật khẩu" required />
+                <label for="txtPasswordCF">Nhập lại mật khẩu</label>
+            </div>
+        </div>
+    </div>
+    <p class="text-danger">@ViewBag.Error</p>
+    <div class="mt-4 mb-0 d-flex">
+        <input type="submit" value="Xác nhận" class="btn btn-outline-primary" />
+        <a class="btn btn-outline-dark mx-3" href="@Url.Action("CaiDatTaiKhoan")">Quay lại</a>
+    </div>
+</div>
+}
+
+

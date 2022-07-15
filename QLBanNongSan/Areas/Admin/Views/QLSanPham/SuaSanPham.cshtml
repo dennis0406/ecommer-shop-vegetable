@@ -1,0 +1,64 @@
+﻿@model QLBanNongSan.Models.San_pham
+
+@{
+    ViewBag.Title = "Sửa sản phẩm - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Sửa sản phẩm</h2>
+
+@using (Html.BeginForm("SuaSanPham", "QLSanPham", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-6">
+            <img src="~/Public/Images/edit.png" />
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="txtTen" name="TenSP" value="@Model.ten_san_pham" type="text" placeholder="Tên sản phẩm" required />
+                <label for="txtTen">Tên sản phẩm</label>
+            </div>
+            <div class="form-floating mb-3">
+                <span>Hình ảnh: </span>
+                <input class="form-control" id="HinhAnh" name="HinhAnh"  type="file" placeholder="Hình ảnh" accept="image/*" />
+                <span for="HinhAnh"><img src="~/Public/Images/@Model.hinh_anh" style="width: 150px; height: 100px; object-fit: cover;" /></span>
+            </div>
+            <div class="form-floating mb-3 ">
+                Loại nông sản:&nbsp;
+                <select name="ma_nong_san" id="loai">
+                    @foreach (var item in ViewBag.loai)
+                    {
+                        if (item.ma_nong_san == Model.ma_nong_san)
+                        {
+                            <option value="@item.ma_nong_san" selected>@item.ten_loai</option>
+                        }
+                        else
+                        {
+                            <option value="@item.ma_nong_san">@item.ten_loai</option>
+                        }
+
+                    }
+                </select>
+
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="Gia" name="Gia" value="@Model.gia" type="text" placeholder="Giá bán" required />
+                <label for="Gia">Giá bán</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="Soluong" value="@Model.so_luong" name="Soluong" type="number" placeholder="Số lượng" required />
+                <label for="Soluong">Số lượng</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input class="form-control btn btn-outline-primary w-25 d-block" type="submit" value="Xác nhận sửa" />
+                <p class="text-danger">@ViewBag.Error</p>
+
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("ChinhSua")" class="btn btn-outline-dark">Quay lại</a>
+</div>

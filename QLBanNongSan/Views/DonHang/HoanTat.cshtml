@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "Đặt hàng thành công - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="back_re">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Đặt hàng thành công</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="h-100 h-custom" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card border-top border-bottom border-3" style="border-color: rgb(255 53 86 / 0.89) !important;">
+                    <div class="card-body p-5">
+
+                        <p class="lead fw-bold mb-5" style="color: rgb(255 53 86 / 0.89);">Đơn hàng của bạn</p>
+
+                        <div class="row">
+                            <div class="col mb-3">
+                                <p class="small text-muted mb-1">Ngày đặt hàng</p>
+                                <p>@String.Format("{0:d/M/yyyy}", Model.ngay_dat_hang)</p>
+                            </div>
+                            <div class="col mb-3">
+                                <p class="small text-muted mb-1">Giờ cụ thể</p>
+                                <p>@String.Format("{0: HH:mm:ss }", Model.ngay_dat_hang)</p>
+                            </div>
+                        </div>
+
+                        <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                            <div class="row">
+                                <div class="col-md-8 col-lg-9">
+                                    <p>Tổng tiền các đơn hàng</p>
+                                </div>
+                                <div class="col-md-4 col-lg-3">
+                                    <p class="price">@Model.tong.ToString("#,##")</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-lg-9">
+                                    <p class="mb-0">Phí vận chuyển</p>
+                                </div>
+                                <div class="col-md-4 col-lg-3">
+                                    <p class="mb-0 price"> @Model.phi_van_chuyen.ToString("#,##")</p>
+                                </div>
+                            </div>
+                        </div>
+                        @{ 
+                            var tongtt = Model.tong + Model.phi_van_chuyen;
+                        }
+                        <div class="row my-4">
+                            <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
+                                <p class="lead fw-bold mb-0 price" style="color: rgb(255 53 86 / 0.89);"> @tongtt.ToString("#,##")</p>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-3 d-flex justify-content-center">
+                            <a class="btn btn-outline-dark" href="@Url.Action("Index","SanPham")">Tiếp tục mua hàng</a>
+                        </div>
+
+                        @*<p class="lead fw-bold mb-4 pb-2" style="color: #f37a27;">Tracking Order</p>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="horizontal-timeline">
+
+                    <ul class="list-inline items d-flex justify-content-between">
+                        <li class="list-inline-item items-list">
+                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">Ordered</p>
+                        </li>
+                        <li class="list-inline-item items-list">
+                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">Shipped</p>
+                        </li>
+                        <li class="list-inline-item items-list">
+                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                On the way
+                            </p>
+                        </li>
+                        <li class="list-inline-item items-list text-end" style="margin-right: 8px;">
+                            <p style="margin-right: -8px;">Delivered</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>*@
+
+                        <p class="mt-4 pt-2 mb-0">
+                            Vui lòng thành thanh toán khi nhận hàng? <a href="#!" style="color: rgb(255 53 86 / 0.89);">
+                                Please contact us
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .price:after {
+        content: "\20AB";
+    }   
+
+.horizontal-timeline .items {
+border-top: 2px solid #ddd;
+}
+
+.horizontal-timeline .items .items-list {
+position: relative;
+margin-right: 0;
+}
+
+.horizontal-timeline .items .items-list:before {
+content: "";
+position: absolute;
+height: 8px;
+width: 8px;
+border-radius: 50%;
+background-color: #ddd;
+top: 0;
+margin-top: -5px;
+}
+
+.horizontal-timeline .items .items-list {
+padding-top: 15px;
+}
+</style>
+

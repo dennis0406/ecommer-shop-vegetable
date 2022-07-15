@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "QL loại nông sản - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+
+    int x = 0;
+}
+
+<h2 class="mt-4">Trang chỉnh sửa loại nông sản</h2>
+
+<div class="card-body">
+    <table id="datatablesSimple" class="text-center">
+        <thead>
+            <tr>
+                <th class="text-center">Tên loại nông sản</th>
+                <th class="text-center">Sửa | Xóa</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Tên loại nông sản</th>
+                <th>Sửa | Xóa</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach (var loaiNS in Model)
+            {
+                <tr>
+                    <td>
+                        @loaiNS.ten_loai
+                    </td>
+                    <td>
+
+                        <a href="/Admin/QLLoaiSP/SuaLoaiNS/@loaiNS.ma_nong_san">Sửa</a> | <a href="/Admin/QLLoaiSP/XoaLoaiNS/@loaiNS.ma_nong_san">Xóa</a>
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

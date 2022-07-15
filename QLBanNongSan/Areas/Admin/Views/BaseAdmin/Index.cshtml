@@ -1,0 +1,134 @@
+﻿@model IEnumerable<QLBanNongSan.Models.Khach_hang>
+
+
+@{
+    ViewBag.title = "Dashoard - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<style>
+    
+    .satisticQuantity {
+        display: flex;
+        gap: 20px;
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 20px;
+    }
+
+    .boxQuantity {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        background-color: darkgray;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0px #000, 0 0 20px 0px lightcyan;
+        border: none;
+        box-sizing: border-box;
+        flex-direction:column;
+    }
+
+    .boxIcon{
+        font-size: 2.5rem;
+        color: #3bed43;
+        text-transform: uppercase;
+       
+    }
+
+    .boxNumber {
+        font-size: 4rem;
+        text-shadow: 0 0 6px red, 0 0 10px #ffff, 0 0 10px yellow;
+    }
+</style>
+<div class="satisticQuantity">
+    <a href="@Url.Action("ChinhSua","QLSanPham")" class="boxQuantity">
+        <div class="boxIcon">
+            Nông sản
+        </div>
+        <div class="boxNumber">
+            @ViewBag.slSP
+        </div>
+    </a>
+    <a href="@Url.Action("ChinhSua","QLSanPham")" class="boxQuantity">
+        <div class="boxIcon">
+            Hóa đơn
+        </div>
+        <div class="boxNumber">
+            @ViewBag.slHD
+        </div>
+    </a>
+    <a href="#customer" class="boxQuantity">
+        <div class="boxIcon">
+            Khách hàng
+        </div>
+        <div class="boxNumber">
+            @ViewBag.slKH
+        </div>
+    </a>
+    <a href="@Url.Action("Index","QLLoaiSP")" class="boxQuantity">
+        <div class="boxIcon">
+            Loại nông sản
+        </div>
+        <div class="boxNumber">
+           @ViewBag.slLNS
+        </div>
+    </a>
+</div>
+
+<div class="card mb-4" id="customer">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Bảng Khách hàng
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Tên Khách hàng</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Xem đơn hàng</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Tên Khách hàng</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Các  đơn hàng</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ten_khach_hang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.so_dien_thoai)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dia_chi)
+                        </td>
+                        <td>
+
+                            <a href="/Admin/SanPham/Index/@Html.DisplayFor(modelItem => item.ma_khach_hang)">Chi tiết</a>
+                            @*I dont know what the fuck of this shit is happenning!!!!*@
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

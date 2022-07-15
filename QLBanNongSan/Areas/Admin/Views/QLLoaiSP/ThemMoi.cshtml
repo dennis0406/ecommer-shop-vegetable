@@ -1,0 +1,32 @@
+﻿@model QLBanNongSan.Models.Loai_nong_san
+
+@{
+    ViewBag.Title = "Thêm mới loại sản phẩm - ";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1 class="mt-4">Thêm mới loại nông sản </h1>
+
+@using (Html.BeginForm("ThemMoi", "QLLoaiSP", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-6">
+            <img src="~/Public/Images/edit.png" />
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="txtTen" name="tenloai" type="text" placeholder="Tên Loại nông sản" required />
+                <label for="txtTen">Tên loại nông sản</label>
+            </div>
+            
+            <div class="form-floating mb-3">
+                <input class="form-control btn btn-outline-primary w-25 d-block" type="submit" value="Xác nhận thêm" />
+
+            </div>
+        </div>
+    </div>
+}
+
+<div class="mt-4">
+    <a class="btn btn-outline-dark" href="@Url.Action("Index")">Quay lại</a>
+</div>
