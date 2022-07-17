@@ -88,5 +88,19 @@ namespace QLBanNongSan.Controllers
             Session["Cart"] = null;
             return RedirectToAction("DangNhap");
         }
+        public ActionResult LichSu()
+        {
+            if (Session["ClientId"] == null)
+            {
+                return RedirectToAction("DangNhap"); ;
+            }
+            CheckCart();
+
+            var email = Session["ClientId"].ToString();
+            Khach_hang kh = data.Khach_hangs.SingleOrDefault(u => u.email == email);
+            List<Hoa_don> donHang = (from s in data.Hoa_dons where s.ma_khach_hang == kh.ma_khach_hang select s).ToList();
+            ViewBag.khachHang = kh;
+            return View(donHang);
+        }
     }
 }

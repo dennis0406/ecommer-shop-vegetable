@@ -19,6 +19,11 @@ namespace QLBanNongSan
                 defaults: new { controller = "SanPham", action = "Index", id = UrlParameter.Optional },
                 namespaces: new string[] { "QLBanNongSan.Controllers" }
             );
+            routes.MapRoute(
+            name: "QLHoaDon",
+            url: "QLHoaDon/DoiTrangThai/{id}/{status}",
+            defaults: new { controller = "QLHoaDon", action = "DoiTrangThai", id = @"\d+", status = @"\d+" }
+            );
         }
     }
 }

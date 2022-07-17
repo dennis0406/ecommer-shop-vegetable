@@ -64,9 +64,9 @@ namespace QLBanNongSan.Areas.Admin.Controllers
         {
             var loaiNS = data.Loai_nong_sans.First(m => m.ma_nong_san == id);
 
-            var tenloai = f["tenloai"];
-            loaiNS.ten_loai = tenloai;
-           
+            loaiNS.ten_loai = f["tenloai"];
+            UpdateModel(loaiNS);
+            data.SubmitChanges();
 
             return RedirectToAction("Index");
 

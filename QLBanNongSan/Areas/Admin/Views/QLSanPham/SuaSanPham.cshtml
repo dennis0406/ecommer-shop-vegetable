@@ -20,7 +20,7 @@
             </div>
             <div class="form-floating mb-3">
                 <span>Hình ảnh: </span>
-                <input class="form-control" id="HinhAnh" name="HinhAnh"  type="file" placeholder="Hình ảnh" accept="image/*" />
+                <input class="form-control" id="HinhAnh" name="HinhAnh" type="file" placeholder="Hình ảnh" accept="image/*" />
                 <span for="HinhAnh"><img src="~/Public/Images/@Model.hinh_anh" style="width: 150px; height: 100px; object-fit: cover;" /></span>
             </div>
             <div class="form-floating mb-3 ">
@@ -44,6 +44,10 @@
             <div class="form-floating mb-3">
                 <input class="form-control" id="Gia" name="Gia" value="@Model.gia" type="text" placeholder="Giá bán" required />
                 <label for="Gia">Giá bán</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="Soluong" value="@Model.don_vi_tinh" name="don_vi_tinh" type="text" placeholder="Đơn vị tính" required />
+                <label for="Soluong">Đơn vị tính</label>
             </div>
             <div class="form-floating mb-3">
                 <input class="form-control" id="Soluong" value="@Model.so_luong" name="Soluong" type="number" placeholder="Số lượng" required />

@@ -26,7 +26,7 @@
                         <figure><img src="~/Public/Images/@item.hinh_anh" alt="#" style="width: 270px; height: 210px; object-fit: cover" /></figure>
                     </div>
                     <h3>@item.ten_san_pham</h3>
-                    <span>@item.gia</span>
+                    <span class="price">@String.Format("{0:#,##}", Convert.ToDecimal(item.gia))</span>
                     <p>
                         <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
                         <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
@@ -37,3 +37,9 @@
     <p class="text-center text-danger"> @ViewBag.empty</p>
     </div>
 </div>
+
+<style>
+    .price:after {
+        content: "\20AB";
+    }  
+</style>

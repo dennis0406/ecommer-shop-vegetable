@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Hoàn thành";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+    var dem = 0;
+    string[] statuses = { "processing", "shipping", "completed" };
+}
+
+<h1 class="mt-4">Đơn hàng đã hoàn thành</h1>
+
+
+<div class="card-body">
+    <table id="datatablesSimple" class="text-center">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên khách hàng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Tổng tiền</th>
+                <th>Phí vận chuyển</th>
+                <th>Ghi chú</th>
+                <th>Trạng thái</th>
+                <th>Sửa trạng thái</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>STT</th>
+                <th>Tên khách hàng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Tổng tiền</th>
+                <th>Phí vận chuyển</th>
+                <th>Ghi chú</th>
+                <th>Trạng thái</th>
+                <th>Sửa trạng thái</th>
+            </tr>
+        </tfoot>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                dem += 1;
+
+                <tr>
+                    <td>
+                        @dem
+                    </td>
+                    @foreach (var kh in ViewBag.khachHang)
+                    {
+                        if (kh.ma_khach_hang == item.ma_khach_hang)
+                        {
+                            <td>
+                                @kh.ten_khach_hang
+                            </td>
+                        }
+
+                    }
+                    <td>
+                        @item.ngay_dat_hang
+                    </td>
+                    <td>
+                        @item.tong
+                    </td>
+                    <td>
+                        @item.phi_van_chuyen
+                    </td>
+                    <td>
+                        @item.ghi_chu
+                    </td>
+                    <td>
+                        @item.trang_thai
+                    </td>
+                    <td>
+                        <div class="btn-group dropstart">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Chọn trạng thái
+                            </button>
+                            <ul class="dropdown-menu bg-info">
+                                @for (int i = 0; i < statuses.Length; i++)
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="/Admin/QLHoaDon/DoiTrangThai?id=@item.ma_hoa_don&status=@statuses[i]&redirect=HoanThanh">@statuses[i]</a>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

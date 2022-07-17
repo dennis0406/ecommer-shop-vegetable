@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNONGSAN" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=PNVD176\DENNISLAP;Initial Catalog=QLNONGSAN;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLNONGSANConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PNVL079\SQLEXPRESS;Initial Catalog=QLNONGSAN;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLNONGSANConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.[_Admin]" Member="_Admins">
     <Type Name="_Admin">
       <Column Name="ma_admin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -19,6 +19,17 @@
       <Association Name="San_pham_CT_hoa_don" Member="San_pham" ThisKey="ma_san_pham" OtherKey="ma_san_pham" Type="San_pham" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
+  <Table Name="dbo.Khach_hang" Member="Khach_hangs">
+    <Type Name="Khach_hang">
+      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mat_khau" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_khach_hang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_dien_thoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Khach_hang_Hoa_don" Member="Hoa_dons" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Hoa_don" />
+    </Type>
+  </Table>
   <Table Name="dbo.Hoa_don" Member="Hoa_dons">
     <Type Name="Hoa_don">
       <Column Name="ma_hoa_don" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -30,17 +41,6 @@
       <Column Name="phi_van_chuyen" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Association Name="Hoa_don_CT_hoa_don" Member="CT_hoa_dons" ThisKey="ma_hoa_don" OtherKey="ma_hoa_don" Type="CT_hoa_don" />
       <Association Name="Khach_hang_Hoa_don" Member="Khach_hang" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Khach_hang" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Khach_hang" Member="Khach_hangs">
-    <Type Name="Khach_hang">
-      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="mat_khau" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="ten_khach_hang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="so_dien_thoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="Khach_hang_Hoa_don" Member="Hoa_dons" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Hoa_don" />
     </Type>
   </Table>
   <Table Name="dbo.Loai_nong_san" Member="Loai_nong_sans">

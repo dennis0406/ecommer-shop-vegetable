@@ -36,12 +36,12 @@ namespace QLBanNongSan.Models
     partial void InsertCT_hoa_don(CT_hoa_don instance);
     partial void UpdateCT_hoa_don(CT_hoa_don instance);
     partial void DeleteCT_hoa_don(CT_hoa_don instance);
-    partial void InsertHoa_don(Hoa_don instance);
-    partial void UpdateHoa_don(Hoa_don instance);
-    partial void DeleteHoa_don(Hoa_don instance);
     partial void InsertKhach_hang(Khach_hang instance);
     partial void UpdateKhach_hang(Khach_hang instance);
     partial void DeleteKhach_hang(Khach_hang instance);
+    partial void InsertHoa_don(Hoa_don instance);
+    partial void UpdateHoa_don(Hoa_don instance);
+    partial void DeleteHoa_don(Hoa_don instance);
     partial void InsertLoai_nong_san(Loai_nong_san instance);
     partial void UpdateLoai_nong_san(Loai_nong_san instance);
     partial void DeleteLoai_nong_san(Loai_nong_san instance);
@@ -96,19 +96,19 @@ namespace QLBanNongSan.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<Hoa_don> Hoa_dons
-		{
-			get
-			{
-				return this.GetTable<Hoa_don>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Khach_hang> Khach_hangs
 		{
 			get
 			{
 				return this.GetTable<Khach_hang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Hoa_don> Hoa_dons
+		{
+			get
+			{
+				return this.GetTable<Hoa_don>();
 			}
 		}
 		
@@ -503,6 +503,216 @@ namespace QLBanNongSan.Models
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Khach_hang")]
+	public partial class Khach_hang : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ma_khach_hang;
+		
+		private string _email;
+		
+		private string _mat_khau;
+		
+		private string _ten_khach_hang;
+		
+		private string _so_dien_thoai;
+		
+		private string _dia_chi;
+		
+		private EntitySet<Hoa_don> _Hoa_dons;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onma_khach_hangChanging(int value);
+    partial void Onma_khach_hangChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void Onmat_khauChanging(string value);
+    partial void Onmat_khauChanged();
+    partial void Onten_khach_hangChanging(string value);
+    partial void Onten_khach_hangChanged();
+    partial void Onso_dien_thoaiChanging(string value);
+    partial void Onso_dien_thoaiChanged();
+    partial void Ondia_chiChanging(string value);
+    partial void Ondia_chiChanged();
+    #endregion
+		
+		public Khach_hang()
+		{
+			this._Hoa_dons = new EntitySet<Hoa_don>(new Action<Hoa_don>(this.attach_Hoa_dons), new Action<Hoa_don>(this.detach_Hoa_dons));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ma_khach_hang", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ma_khach_hang
+		{
+			get
+			{
+				return this._ma_khach_hang;
+			}
+			set
+			{
+				if ((this._ma_khach_hang != value))
+				{
+					this.Onma_khach_hangChanging(value);
+					this.SendPropertyChanging();
+					this._ma_khach_hang = value;
+					this.SendPropertyChanged("ma_khach_hang");
+					this.Onma_khach_hangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mat_khau", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string mat_khau
+		{
+			get
+			{
+				return this._mat_khau;
+			}
+			set
+			{
+				if ((this._mat_khau != value))
+				{
+					this.Onmat_khauChanging(value);
+					this.SendPropertyChanging();
+					this._mat_khau = value;
+					this.SendPropertyChanged("mat_khau");
+					this.Onmat_khauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten_khach_hang", DbType="NVarChar(50)")]
+		public string ten_khach_hang
+		{
+			get
+			{
+				return this._ten_khach_hang;
+			}
+			set
+			{
+				if ((this._ten_khach_hang != value))
+				{
+					this.Onten_khach_hangChanging(value);
+					this.SendPropertyChanging();
+					this._ten_khach_hang = value;
+					this.SendPropertyChanged("ten_khach_hang");
+					this.Onten_khach_hangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_dien_thoai", DbType="VarChar(20)")]
+		public string so_dien_thoai
+		{
+			get
+			{
+				return this._so_dien_thoai;
+			}
+			set
+			{
+				if ((this._so_dien_thoai != value))
+				{
+					this.Onso_dien_thoaiChanging(value);
+					this.SendPropertyChanging();
+					this._so_dien_thoai = value;
+					this.SendPropertyChanged("so_dien_thoai");
+					this.Onso_dien_thoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dia_chi", DbType="NVarChar(100)")]
+		public string dia_chi
+		{
+			get
+			{
+				return this._dia_chi;
+			}
+			set
+			{
+				if ((this._dia_chi != value))
+				{
+					this.Ondia_chiChanging(value);
+					this.SendPropertyChanging();
+					this._dia_chi = value;
+					this.SendPropertyChanged("dia_chi");
+					this.Ondia_chiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khach_hang_Hoa_don", Storage="_Hoa_dons", ThisKey="ma_khach_hang", OtherKey="ma_khach_hang")]
+		public EntitySet<Hoa_don> Hoa_dons
+		{
+			get
+			{
+				return this._Hoa_dons;
+			}
+			set
+			{
+				this._Hoa_dons.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Hoa_dons(Hoa_don entity)
+		{
+			this.SendPropertyChanging();
+			entity.Khach_hang = this;
+		}
+		
+		private void detach_Hoa_dons(Hoa_don entity)
+		{
+			this.SendPropertyChanging();
+			entity.Khach_hang = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hoa_don")]
 	public partial class Hoa_don : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -775,216 +985,6 @@ namespace QLBanNongSan.Models
 		{
 			this.SendPropertyChanging();
 			entity.Hoa_don = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Khach_hang")]
-	public partial class Khach_hang : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ma_khach_hang;
-		
-		private string _email;
-		
-		private string _mat_khau;
-		
-		private string _ten_khach_hang;
-		
-		private string _so_dien_thoai;
-		
-		private string _dia_chi;
-		
-		private EntitySet<Hoa_don> _Hoa_dons;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onma_khach_hangChanging(int value);
-    partial void Onma_khach_hangChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
-    partial void Onmat_khauChanging(string value);
-    partial void Onmat_khauChanged();
-    partial void Onten_khach_hangChanging(string value);
-    partial void Onten_khach_hangChanged();
-    partial void Onso_dien_thoaiChanging(string value);
-    partial void Onso_dien_thoaiChanged();
-    partial void Ondia_chiChanging(string value);
-    partial void Ondia_chiChanged();
-    #endregion
-		
-		public Khach_hang()
-		{
-			this._Hoa_dons = new EntitySet<Hoa_don>(new Action<Hoa_don>(this.attach_Hoa_dons), new Action<Hoa_don>(this.detach_Hoa_dons));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ma_khach_hang", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ma_khach_hang
-		{
-			get
-			{
-				return this._ma_khach_hang;
-			}
-			set
-			{
-				if ((this._ma_khach_hang != value))
-				{
-					this.Onma_khach_hangChanging(value);
-					this.SendPropertyChanging();
-					this._ma_khach_hang = value;
-					this.SendPropertyChanged("ma_khach_hang");
-					this.Onma_khach_hangChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string email
-		{
-			get
-			{
-				return this._email;
-			}
-			set
-			{
-				if ((this._email != value))
-				{
-					this.OnemailChanging(value);
-					this.SendPropertyChanging();
-					this._email = value;
-					this.SendPropertyChanged("email");
-					this.OnemailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mat_khau", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string mat_khau
-		{
-			get
-			{
-				return this._mat_khau;
-			}
-			set
-			{
-				if ((this._mat_khau != value))
-				{
-					this.Onmat_khauChanging(value);
-					this.SendPropertyChanging();
-					this._mat_khau = value;
-					this.SendPropertyChanged("mat_khau");
-					this.Onmat_khauChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten_khach_hang", DbType="NVarChar(50)")]
-		public string ten_khach_hang
-		{
-			get
-			{
-				return this._ten_khach_hang;
-			}
-			set
-			{
-				if ((this._ten_khach_hang != value))
-				{
-					this.Onten_khach_hangChanging(value);
-					this.SendPropertyChanging();
-					this._ten_khach_hang = value;
-					this.SendPropertyChanged("ten_khach_hang");
-					this.Onten_khach_hangChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_so_dien_thoai", DbType="VarChar(20)")]
-		public string so_dien_thoai
-		{
-			get
-			{
-				return this._so_dien_thoai;
-			}
-			set
-			{
-				if ((this._so_dien_thoai != value))
-				{
-					this.Onso_dien_thoaiChanging(value);
-					this.SendPropertyChanging();
-					this._so_dien_thoai = value;
-					this.SendPropertyChanged("so_dien_thoai");
-					this.Onso_dien_thoaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dia_chi", DbType="NVarChar(100)")]
-		public string dia_chi
-		{
-			get
-			{
-				return this._dia_chi;
-			}
-			set
-			{
-				if ((this._dia_chi != value))
-				{
-					this.Ondia_chiChanging(value);
-					this.SendPropertyChanging();
-					this._dia_chi = value;
-					this.SendPropertyChanged("dia_chi");
-					this.Ondia_chiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khach_hang_Hoa_don", Storage="_Hoa_dons", ThisKey="ma_khach_hang", OtherKey="ma_khach_hang")]
-		public EntitySet<Hoa_don> Hoa_dons
-		{
-			get
-			{
-				return this._Hoa_dons;
-			}
-			set
-			{
-				this._Hoa_dons.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Hoa_dons(Hoa_don entity)
-		{
-			this.SendPropertyChanging();
-			entity.Khach_hang = this;
-		}
-		
-		private void detach_Hoa_dons(Hoa_don entity)
-		{
-			this.SendPropertyChanging();
-			entity.Khach_hang = null;
 		}
 	}
 	

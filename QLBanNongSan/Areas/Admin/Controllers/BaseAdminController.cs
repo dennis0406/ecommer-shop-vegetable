@@ -25,8 +25,6 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             ViewBag.slLNS = data.Loai_nong_sans.ToList().Count();
 
             var kh = data.Khach_hangs.ToList();
-
-
             return View(kh);
         }
     }

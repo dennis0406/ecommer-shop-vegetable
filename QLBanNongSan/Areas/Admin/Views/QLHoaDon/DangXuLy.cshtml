@@ -3,7 +3,7 @@
     ViewBag.Title = "Đang xử lý";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
     var dem = 0;
-    string[] statuses = {"processing", "shipping", "" };
+    string[] statuses = {"processing", "shipping", "completed" };
 }
 
 <h1 class="mt-4">Đơn hàng đang xử lý</h1>
@@ -35,12 +35,13 @@
                 <th>Sửa trạng thái</th>
             </tr>
         </tfoot>
+
         <tbody>
 
             @foreach (var item in Model)
             {
                 dem += 1;
-            
+
             <tr>
                 <td>
                     @dem
@@ -71,15 +72,23 @@
                     @item.trang_thai
                 </td>
                 <td>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Thay đổi trạng thái</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <div class="btn-group dropstart">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                             Chọn trạng thái
+                        </button>
+                        <ul class="dropdown-menu bg-info">
+                            @for (int i = 0; i < statuses.Length; i++)
+                            {
+                                <li>
+                                    <a class="dropdown-item" href="/Admin/QLHoaDon/DoiTrangThai?id=@item.ma_hoa_don&status=@statuses[i]&redirect=DangXuLy">@statuses[i]</a>
+                                </li>
+                            }
+                            
+                        </ul>
+                    </div>
                 </td>
             </tr>
-        }
+            }
             </tbody>
         </table>
 </div>

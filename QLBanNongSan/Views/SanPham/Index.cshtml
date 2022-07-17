@@ -46,6 +46,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        .price:after {
+            content: "\20AB";
+        }  
 
         .bag__icon {
             font-size: 25px;
@@ -96,7 +99,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarsExample04">
                                 <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
+                                    <li class="nav-item ">
                                         <a class="nav-link" href="@Url.Action("Index", "SanPham")">Trang chủ</a>
                                     </li>
                                     <li class="nav-item">
@@ -112,7 +115,7 @@
                                             {
                                                 foreach (var item in ViewBag.loaiNS)
                                                 {
-                                                    <li><a class="dropdown-item " href="@Url.Action("DanhMuc","SanPham", new {@id = item.ma_nong_san })">@item.ten_loai</a></li>
+                                                    <li><a class="dropdown-item fw-bold" href="@Url.Action("DanhMuc","SanPham", new {@id = item.ma_nong_san })">@item.ten_loai</a></li>
                                                 }
                                             }
                                         </ul>
@@ -126,23 +129,26 @@
                                         <a class="nav-link" href="@Url.Action("Index", "GioHang")"><ion-icon class="bag__icon" data-text="@ViewBag.cart" name="cart-outline"></ion-icon></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">
-                                            @if (Session["ClientId"] == null)
-                                            {
-                                                <span>Đăng nhập</span>
-                                            }
-                                            else
-                                            { <span>@Session["ClientId"]</span>}
+                                        @if (Session["ClientId"] == null)
+                                        {
+                                        <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">Đăng nhập</a>
+                                        }
+                                        else
+                                        { 
+                                        <div class="btn-group bg-transparent dropstart">
+                                            <button class="btn dropdown-toggle text-register text-uppercase text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                @Session["ClientId"]
+                                            </button>
+                                            <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="@Url.Action("LichSu", "TaiKhoan")">Lịch sử mua hàng</a></li>
+                                                <li><a class="dropdown-item" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a></li>
 
-
-                                        </a>
+                                            </ul>
+                                        </div>
+                                        }
                                     </li>
-                                    @if (Session["ClientId"] != null)
-                                    {
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a>
-                                        </li>
-                                    }
+                                    
                                 </ul>
                             </div>
                         </nav>
@@ -213,7 +219,7 @@
                                 <figure><img src="~/Public/Images/@Html.DisplayFor(modelItem => item.hinh_anh)" alt="#" style="width: 270px; height: 210px; object-fit: cover" /></figure>
                             </div>
                             <h3>@Html.DisplayFor(modelItem => item.ten_san_pham)</h3>
-                            <span>@item.gia</span>
+                            <span class="price">@String.Format("{0:#,##}", Convert.ToDecimal(item.gia))</span>
                             <p>
                                 <a class="btn btn-outline-success" href="/GioHang/AddToCart/@Html.DisplayFor(modelItem => item.ma_san_pham)">Thêm giỏ hàng</a>
                                 <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@Html.DisplayFor(modelItem => item.ma_san_pham)">Chi tiết</a>

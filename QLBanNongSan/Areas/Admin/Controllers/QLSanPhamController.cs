@@ -102,6 +102,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             var tensp = f["TenSP"];
 
             var manongsan = f["ma_nong_san"];
+            var don_vi_tinh = f["don_vi_tinh"];
             var gia = f["Gia"];
             var soluong = f["Soluong"];
 
@@ -119,6 +120,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
 
                     sp.ten_san_pham = tensp;
                     sp.hinh_anh = filename;
+                    sp.don_vi_tinh = don_vi_tinh;
                     sp.ma_nong_san = int.Parse(manongsan);
                     sp.gia = decimal.Parse(gia);
                     sp.so_luong = int.Parse(soluong);
@@ -135,6 +137,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             {
                 sp.ten_san_pham = tensp;
                 sp.hinh_anh = sp.hinh_anh;
+                sp.don_vi_tinh = sp.don_vi_tinh;
                 sp.ma_nong_san = int.Parse(manongsan);
                 sp.gia = decimal.Parse(gia);
                 sp.so_luong = int.Parse(soluong);

@@ -245,12 +245,14 @@
     <Content Include="Areas\Admin\Views\QLLoaiSP\ThemMoi.cshtml" />
     <Content Include="Areas\Admin\Views\QLLoaiSP\Index.cshtml" />
     <Content Include="Areas\Admin\Views\QLLoaiSP\SuaLoaiNS.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\DangXuLy.cshtml" />
     <Content Include="Models\DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Areas\Admin\Views\QLHoaDon\DangXuLy.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\HoanThanh.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\DangGiao.cshtml" />
     <None Include="Models\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
@@ -287,6 +289,7 @@
     <Content Include="Views\TaiKhoan\DangKy.cshtml" />
     <Content Include="Views\DonHang\HoanTat.cshtml" />
     <Content Include="Views\SanPham\DanhMuc.cshtml" />
+    <Content Include="Views\TaiKhoan\LichSu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

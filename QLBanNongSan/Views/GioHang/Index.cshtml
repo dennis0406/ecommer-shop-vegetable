@@ -48,7 +48,7 @@
                         <img src="~/Public/Images/@Url.Content(item.shoppingProduct.hinh_anh)" style="width:100px;height:100px;" />
                     </td>
                     <td class="price">
-                        @Html.DisplayFor(model => item.shoppingProduct.gia)
+                        @String.Format("{0:#,##}", item.shoppingProduct.gia)
                     </td>
                     <td>
                         @using (Html.BeginForm("UpdateQuantity", "GioHang", FormMethod.Post))
@@ -59,24 +59,21 @@
                                 <input class="btn btn-outline-success" type="submit" value="Cập nhật" />
                             </div>
                         }
-
                     </td>
                     <td>
                         @item.shoppingProduct.don_vi_tinh
                     </td>
                     <td class="price">
-                        @total
+                        @String.Format("{0:#,##}", total)
                     </td>
-
                     <td>
                         <a class="btn btn-outline-danger" href="/GioHang/RemoveCart/@item.shoppingProduct.ma_san_pham">Xóa</a>
                     </td>
                 </tr>
-
                 }
             </tbody>
             <tfoot>
-                <tr><td colspan="5">Tổng tiền: @Model.Total()</td></tr>
+                <tr><td colspan="5" >Tổng tiền: <span class="price">@String.Format("{0:#,##}", Model.Total())</span> </td></tr>
             </tfoot>
         </table>
         <div class="d-flex justify-content-between mx-5">
@@ -84,6 +81,13 @@
             <a class="btn btn-outline-dark" href="@Url.Action("Index","DonHang")">Đến trang thanh toán</a>
         </div>
     }
-
-
 </div>
+<style>
+    .price{
+        color: red;
+        font-weight: bold;
+    }
+    .price:after {
+        content: "\20AB";
+    }  
+</style>

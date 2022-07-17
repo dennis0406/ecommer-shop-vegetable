@@ -25,71 +25,31 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             return View(donHang);
         }
 
-        // GET: Admin/HoaDon/Create
-        public ActionResult Create()
+        public ActionResult HoanThanh()
         {
-            
-            return View();
+            List<Hoa_don> donHang = (from s in data.Hoa_dons where s.trang_thai == "completed" select s).ToList();
+            List<Khach_hang> kh = data.Khach_hangs.ToList();
+            ViewBag.khachHang = kh;
+            return View(donHang);
         }
 
-        // POST: Admin/HoaDon/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult DangGiao()
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            List<Hoa_don> donHang = (from s in data.Hoa_dons where s.trang_thai == "shipping" select s).ToList();
+            List<Khach_hang> kh = data.Khach_hangs.ToList();
+            ViewBag.khachHang = kh;
+            return View(donHang);
         }
-
-        // GET: Admin/HoaDon/Edit/5
-        public ActionResult Edit(int id)
+        // Change status order 
+        public ActionResult DoiTrangThai(int id, String status, String redirect)
         {
-            return View();
+            var hoaDon = data.Hoa_dons.First(m => m.ma_hoa_don == id);
+            hoaDon.trang_thai = status;
+            UpdateModel(hoaDon);
+            data.SubmitChanges();
+
+            return RedirectToAction(redirect);  
         }
-
-        // POST: Admin/HoaDon/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Admin/HoaDon/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Admin/HoaDon/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

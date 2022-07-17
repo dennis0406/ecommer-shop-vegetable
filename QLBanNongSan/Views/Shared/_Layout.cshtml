@@ -89,7 +89,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarsExample04">
                                 <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="@Url.Action("Index", "SanPham")">Trang chủ</a>
                                     </li>
                                     <li class="nav-item">
@@ -100,9 +100,12 @@
                                             Danh mục sản phẩm
                                         </button>
                                         <ul class="dropdown-menu bg-transparent" aria-labelledby="dropdownMenuButton2">
-                                            @foreach (var item in ViewBag.loaiNS)
+                                            @if (ViewBag.loaiNS != null)
                                             {
-                                                <li><a class="dropdown-item " href="@Url.Action("DanhMuc","SanPham", new {@id = item.ma_nong_san })">@item.ten_loai</a></li>
+                                                foreach (var item in ViewBag.loaiNS)
+                                                {
+                                                    <li><a class="dropdown-item " href="@Url.Action("DanhMuc","SanPham", new {@id = item.ma_nong_san })">@item.ten_loai</a></li>
+                                                }
                                             }
                                         </ul>
                                     </li>
