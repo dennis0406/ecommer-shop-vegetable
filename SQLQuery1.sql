@@ -10,7 +10,7 @@ CREATE TABLE Loai_nong_san (
 
 CREATE TABLE San_pham (
 	ma_san_pham INT identity(1,1) NOT NULL ,
-	ten_san_pham NVARCHAR (50) NOT NULL,
+	ten_san_pham NVARCHAR (50) COLLATE SQL_Latin1_General_CP1_CI_AI NOT NULL,
 	hinh_anh varchar(100),
 	ma_nong_san INT  NOT NULL,
 	gia decimal(18,2),
@@ -37,8 +37,9 @@ CREATE TABLE Hoa_don(
 	ngay_dat_hang DATETIME,
 	ma_khach_hang INT,
 	tong decimal(18,2),
-	trang_thai varchar(20),
-	ghi_chu NVARCHAR (100),
+	trang_thai nvarchar(255),
+	ghi_chu NVARCHAR (255),
+	nhan_xet NVARCHAR(100),
 	phi_van_chuyen decimal(18,2),
 	CONSTRAINT fk_HD_KH FOREIGN KEY (ma_khach_hang) REFERENCES Khach_hang(ma_khach_hang) ON DELETE CASCADE ,
 	CONSTRAINT pk_HD PRIMARY KEY (ma_hoa_don) 
@@ -94,17 +95,16 @@ VALUES
 
 Insert into Khach_hang 
 values
-('mylinh@gmail.com','123245',N'Nguyễn Thị Mỹ Linh',0986542312,N'Quảng Bình'),
-('phuong@gmail.com','123245',N'Hồ Thị Phượng',0865421532,N'Quảng Trị'),
-('ngoclinh@gmail.com','123245',N'Nguyễn Thị Ngọc Linh',08886351243,N'Quảng Bình'),
-('tuyetgiang@gmail.com','123245',N'Nguyễn Thị Tuyết Giang',0896575416,N'Quảng Nam');
+('mylinh@gmail.com','123456',N'Nguyễn Thị Mỹ Linh',0986542312,N'Quảng Bình'),
+('phuong@gmail.com','123456',N'Hồ Thị Phượng',0865421532,N'Quảng Trị'),
+('ngoclinh@gmail.com','123456',N'Nguyễn Thị Ngọc Linh',08886351243,N'Quảng Bình'),
+('tuyetgiang@gmail.com','123456',N'Nguyễn Thị Tuyết Giang',0896575416,N'Quảng Nam');
 
 Insert into _Admin 
 values
 ('laple','1234','vanlap1702@gmail.com')
 
 
-select * from San_pham
-go 
-select * from hoa_don
+select * from Hoa_don
+ 
 

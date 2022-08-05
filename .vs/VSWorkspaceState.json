@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QLBanNongSan",
+    "\\QLBanNongSan\\Controllers"
   ],
-  "SelectedNode": "\\QLBanNongSan.sln",
+  "SelectedNode": "\\QLBanNongSan\\Controllers\\DonHangController.cs",
   "PreviewInSolutionExplorer": false
 }

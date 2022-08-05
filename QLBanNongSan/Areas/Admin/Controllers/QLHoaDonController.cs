@@ -40,6 +40,13 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             ViewBag.khachHang = kh;
             return View(donHang);
         }
+        public ActionResult DaHuy()
+        {
+            List<Hoa_don> donHang = (from s in data.Hoa_dons where s.trang_thai == "canceled" select s).ToList();
+            List<Khach_hang> kh = data.Khach_hangs.ToList();
+            ViewBag.khachHang = kh;
+            return View(donHang);
+        }
         // Change status order 
         public ActionResult DoiTrangThai(int id, String status, String redirect)
         {

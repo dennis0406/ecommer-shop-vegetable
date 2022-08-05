@@ -8,12 +8,12 @@ using System.IO;
 
 namespace QLBanNongSan.Areas.Admin.Controllers
 {
-    public class QLLoaiSPController : Controller
+    public class QLLoaiSPController : BaseAdminController
     {
         DataClasses1DataContext data = new DataClasses1DataContext();
 
         
-        public ActionResult Index()
+        public ActionResult ChinhSua()
         {
             List<Loai_nong_san> loaiNS = data.Loai_nong_sans.ToList();
             return View(loaiNS);

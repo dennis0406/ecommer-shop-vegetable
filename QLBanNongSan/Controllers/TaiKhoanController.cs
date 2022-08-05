@@ -98,9 +98,26 @@ namespace QLBanNongSan.Controllers
 
             var email = Session["ClientId"].ToString();
             Khach_hang kh = data.Khach_hangs.SingleOrDefault(u => u.email == email);
-            List<Hoa_don> donHang = (from s in data.Hoa_dons where s.ma_khach_hang == kh.ma_khach_hang select s).ToList();
+            List<Hoa_don> donHang = 
+                (from s in data.Hoa_dons where s.ma_khach_hang == kh.ma_khach_hang orderby s.ma_hoa_don descending select s).ToList();
+            List<CT_hoa_don> cthd = 
+                (from s in data.CT_hoa_dons select s).ToList();
+            List<San_pham> sp =
+                (from s in data.San_phams select s).ToList();
+            ViewBag.cthd = cthd;
             ViewBag.khachHang = kh;
+            ViewBag.sp = sp;
             return View(donHang);
+        }
+        //Cancel order
+        public ActionResult HuyDonHang(int idOd, String feedback)
+        {
+            var hoaDon = data.Hoa_dons.First(m => m.ma_hoa_don == idOd);
+            hoaDon.trang_thai = "canceled";
+            hoaDon.nhan_xet = feedback;
+            UpdateModel(hoaDon);
+            data.SubmitChanges();
+            return RedirectToAction("LichSu");
         }
     }
 }

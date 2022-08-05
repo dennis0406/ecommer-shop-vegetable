@@ -49,16 +49,12 @@ namespace QLBanNongSan.Controllers
             Cart cart = Session["Cart"] as Cart;
             var kh = data.Khach_hangs.First(m => m.email == email);
 
-            //Update client info
-            var ten = f["tenKH"];
-            var diaChi = f["diaChi"];
-            var sdt = f["sdt"];
-
             try
             {
-                kh.ten_khach_hang = ten;
-                kh.dia_chi = diaChi;
-                kh.so_dien_thoai = sdt;
+                //Update client info
+                kh.ten_khach_hang = f["tenKH"];
+                kh.dia_chi = f["diaChi"];
+                kh.so_dien_thoai = f["sdt"];
                 UpdateModel(kh);
                 data.SubmitChanges();
 
@@ -67,7 +63,7 @@ namespace QLBanNongSan.Controllers
                 hd.ngay_dat_hang = dateCf;
                 hd.ma_khach_hang = kh.ma_khach_hang;
                 decimal total = (decimal)cart.Total();
-                hd.tong = total;
+                hd.tong = total + phiVanChuyen;
                 hd.trang_thai = "processing";
                 hd.ghi_chu = f["ghiChu"];
                 hd.phi_van_chuyen = phiVanChuyen;
@@ -118,7 +114,7 @@ namespace QLBanNongSan.Controllers
 
             DateTime ? datef = (DateTime?)dateCf;
 
-
+            ViewBag.shippingFee = phiVanChuyen;
             Hoa_don hd = data.Hoa_dons.SingleOrDefault(s => s.ngay_dat_hang == datef);
             CheckCart();
             return View(hd);

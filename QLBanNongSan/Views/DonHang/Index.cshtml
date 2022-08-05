@@ -35,7 +35,7 @@
                     <label for="txtDiaChi">Địa chỉ người nhận</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input class="form-control" id="txtGhiChu" name="ghiChu" type="text" placeholder="Ghi chú" required />
+                    <input class="form-control" id="txtGhiChu" name="ghiChu" type="text" placeholder="Ghi chú" />
                     <label for="txtGhiChu">Ghi chú</label>
                 </div>
                 <div class="form-floating mb-3 d-flex justify-content-between">
@@ -57,13 +57,13 @@
                     <div class="col-md-6 col-sm-12 text-center d-flex flex-column align-items-center justify-content-center">
                         <p>Tên: <b> @Html.DisplayFor(model => item.shoppingProduct.ten_san_pham)</b></p>
                         <p>Số lượng: <b>@Html.DisplayFor(model => item.shopping_quantity)</b></p>
-                        <p>Tổng tiền: <b class="price">@total</b></p>
+                        <p>Tổng tiền: <b class="price">@total.ToString("#,##")</b></p>
                     </div>
                 </div>
                 <hr />
             }
 
-            <p>Tổng tiền: <b class="price">@Model.Total()</b> </p>
+            <p>Tổng tiền: <b class="price">@Model.Total().ToString("#,##")</b> </p>
         </div>
     </div>
 

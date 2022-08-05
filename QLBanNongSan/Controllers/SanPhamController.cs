@@ -13,20 +13,31 @@ namespace QLBanNongSan.Controllers
         DataClasses1DataContext data = new DataClasses1DataContext();
         
         // GET: SanPham
-        public ActionResult Index()
+        public ActionResult Index(String SearchString="")
 
         {
             CheckCart();
-            var sp = from s in data.San_phams orderby s.ma_san_pham descending select s;
-            List < San_pham > sanpham = sp.ToList();
+            List<San_pham> sanpham;
+            if (SearchString != "")
+            {
+                sanpham = (from s in data.San_phams where 
+                           s.ten_san_pham.ToUpper().Contains(SearchString.ToUpper()) select s).ToList();
+            }
+            else
+            {
+                var sp = from s in data.San_phams orderby s.ma_san_pham descending select s;
+                sanpham = sp.ToList();
+            }
 
             var spbc = from p in data.San_phams
                       join o in data.CT_hoa_dons
                       on p.ma_san_pham equals o.ma_san_pham
+                      orderby o.so_luong descending
                       select p;
 
+
             
-            List<San_pham> spbcf = spbc.ToList();
+            List<San_pham> spbcf = spbc.GroupBy(p => p.ma_san_pham).Select(g => g.First()).ToList();
 
             ViewBag.spbc = spbcf;
             return View(sanpham);

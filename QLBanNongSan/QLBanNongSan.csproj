@@ -243,19 +243,21 @@
     <Content Include="Areas\Admin\Views\QLSanPham\ChinhSua.cshtml" />
     <Content Include="Areas\Admin\Views\QLSanPham\SuaSanPham.cshtml" />
     <Content Include="Areas\Admin\Views\QLLoaiSP\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\QLLoaiSP\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLLoaiSP\ChinhSua.cshtml" />
     <Content Include="Areas\Admin\Views\QLLoaiSP\SuaLoaiNS.cshtml" />
     <Content Include="Areas\Admin\Views\QLHoaDon\DangXuLy.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\HoanThanh.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\DangGiao.cshtml" />
     <Content Include="Models\DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Areas\Admin\Views\QLHoaDon\HoanThanh.cshtml" />
-    <Content Include="Areas\Admin\Views\QLHoaDon\DangGiao.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\DaHuy.cshtml" />
     <None Include="Models\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

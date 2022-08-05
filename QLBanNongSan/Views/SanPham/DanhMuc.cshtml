@@ -28,8 +28,15 @@
                     <h3>@item.ten_san_pham</h3>
                     <span class="price">@String.Format("{0:#,##}", Convert.ToDecimal(item.gia))</span>
                     <p>
-                        <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
-                        <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
+                        @if (item.so_luong > 0)
+                        {
+                            <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
+                            <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
+                        }
+                        else
+                        {
+                            <button class="btn btn-dark" disabled>Đã bán hết</button>
+                        }
                     </p>
                 </div>
             </div>

@@ -19,6 +19,20 @@
       <Association Name="San_pham_CT_hoa_don" Member="San_pham" ThisKey="ma_san_pham" OtherKey="ma_san_pham" Type="San_pham" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
+  <Table Name="dbo.Hoa_don" Member="Hoa_dons">
+    <Type Name="Hoa_don">
+      <Column Name="ma_hoa_don" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngay_dat_hang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tong" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="trang_thai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="nhan_xet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="phi_van_chuyen" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Hoa_don_CT_hoa_don" Member="CT_hoa_dons" ThisKey="ma_hoa_don" OtherKey="ma_hoa_don" Type="CT_hoa_don" />
+      <Association Name="Khach_hang_Hoa_don" Member="Khach_hang" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Khach_hang" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
   <Table Name="dbo.Khach_hang" Member="Khach_hangs">
     <Type Name="Khach_hang">
       <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -28,19 +42,6 @@
       <Column Name="so_dien_thoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="dia_chi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="Khach_hang_Hoa_don" Member="Hoa_dons" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Hoa_don" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Hoa_don" Member="Hoa_dons">
-    <Type Name="Hoa_don">
-      <Column Name="ma_hoa_don" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ngay_dat_hang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ma_khach_hang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tong" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="trang_thai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="phi_van_chuyen" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Association Name="Hoa_don_CT_hoa_don" Member="CT_hoa_dons" ThisKey="ma_hoa_don" OtherKey="ma_hoa_don" Type="CT_hoa_don" />
-      <Association Name="Khach_hang_Hoa_don" Member="Khach_hang" ThisKey="ma_khach_hang" OtherKey="ma_khach_hang" Type="Khach_hang" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Loai_nong_san" Member="Loai_nong_sans">

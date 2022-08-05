@@ -116,21 +116,23 @@
                                         <a class="nav-link" href="@Url.Action("Index", "GioHang")"><ion-icon class="bag__icon" data-text="@ViewBag.cart" name="cart-outline"></ion-icon></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">
-                                            @if (Session["ClientId"] == null)
-                                            {
-                                                <span>Đăng nhập</span>
-                                            }
-                                            else
-                                            { <span>@Session["ClientId"]</span>}
-                                        </a>
+                                        @if (Session["ClientId"] == null)
+                                        {
+                                            <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">Đăng nhập</a>
+                                        }
+                                        else
+                                        {
+                                            <div class="btn-group bg-transparent dropstart">
+                                                <button class="btn dropdown-toggle text-register text-uppercase text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    @Session["ClientId"]
+                                                </button>
+                                                <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton">
+                                                    <li><a class="dropdown-item" href="@Url.Action("LichSu", "TaiKhoan")">Lịch sử mua hàng</a></li>
+                                                    <li><a class="dropdown-item" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a></li>
+                                                </ul>
+                                            </div>
+                                        }
                                     </li>
-                                    @if (Session["ClientId"] != null)
-                                    {
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a>
-                                        </li>
-                                    }
                                 </ul>
                             </div>
                         </nav>

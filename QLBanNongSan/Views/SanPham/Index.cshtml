@@ -111,7 +111,7 @@
                                             Danh mục sản phẩm
                                         </button>
                                         <ul class="dropdown-menu bg-transparent" aria-labelledby="dropdownMenuButton2">
-                                            @if (ViewBag.loaiNS !=null)
+                                            @if (ViewBag.loaiNS != null)
                                             {
                                                 foreach (var item in ViewBag.loaiNS)
                                                 {
@@ -131,24 +131,22 @@
                                     <li class="nav-item">
                                         @if (Session["ClientId"] == null)
                                         {
-                                        <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">Đăng nhập</a>
+                                            <a class="nav-link text-register" href="@Url.Action("DangNhap", "TaiKhoan")">Đăng nhập</a>
                                         }
                                         else
-                                        { 
-                                        <div class="btn-group bg-transparent dropstart">
-                                            <button class="btn dropdown-toggle text-register text-uppercase text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                @Session["ClientId"]
-                                            </button>
-                                            <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="@Url.Action("LichSu", "TaiKhoan")">Lịch sử mua hàng</a></li>
-                                                <li><a class="dropdown-item" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a></li>
-
-                                            </ul>
-                                        </div>
+                                        {
+                                            <div class="btn-group bg-transparent dropstart">
+                                                <button class="btn dropdown-toggle text-register text-uppercase text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    @Session["ClientId"]
+                                                </button>
+                                                <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton">
+                                                    <li><a class="dropdown-item" href="@Url.Action("LichSu", "TaiKhoan")">Lịch sử mua hàng</a></li>
+                                                    <li><a class="dropdown-item" href="@Url.Action("DangXuat", "TaiKhoan")">Đăng xuất</a></li>
+                                                </ul>
+                                            </div>
                                         }
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </nav>
@@ -166,7 +164,7 @@
                         <div class="col-md-7">
                             <div class="text_box">
                                 <span>Now started</span>
-                                <h1> <strong>Fruit And </strong> <br> Vegetables </h1>
+                                <h1> <strong>Fruits And </strong> <br> Vegetables </h1>
                                 <a class="read_more" href="#about" role="button">Về chúng tôi</a>
                             </div>
                         </div>
@@ -202,7 +200,14 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="titlepage">
-                        <h2>Các sản phẩm mới nhất</h2>
+                        @using (Html.BeginForm())
+                        {
+                            <div class="input-group my-3">
+                                @Html.TextBox("SearchString", "", new { @class = "form-control" })
+                                <input type="submit" class="btn btn-outline-info" value="Tìm kiếm" />
+                            </div>
+                        }
+                        <h2>Sản phẩm mới nhất</h2>
                         <span>
                             Chuyên cung cấp các loại rau củ tươi ngon.
                         </span>
@@ -221,31 +226,60 @@
                             <h3>@Html.DisplayFor(modelItem => item.ten_san_pham)</h3>
                             <span class="price">@String.Format("{0:#,##}", Convert.ToDecimal(item.gia))</span>
                             <p>
-                                <a class="btn btn-outline-success" href="/GioHang/AddToCart/@Html.DisplayFor(modelItem => item.ma_san_pham)">Thêm giỏ hàng</a>
-                                <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@Html.DisplayFor(modelItem => item.ma_san_pham)">Chi tiết</a>
+                                @if (item.so_luong > 0)
+                                {
+                                    <a class="btn btn-outline-success" href="/GioHang/AddToCart/@Html.DisplayFor(modelItem => item.ma_san_pham)">Thêm giỏ hàng</a>
+                                    <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@Html.DisplayFor(modelItem => item.ma_san_pham)">Chi tiết</a>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-dark" disabled>Đã bán hết</button>
+                                }
                             </p>
                         </div>
                     </div>
                 }
 
-                @*
-        @foreach (var item in ViewBag.spbc)
-        {
-            var itemId = item.ma_san_pham;
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div id="ho_bo" class="our_products text-center">
-                    <div class="product">
-                        <figure><img src="~/Public/Images/@item.hinh_anh" alt="#" style="width: 270px; height: 210px; object-fit: cover" /></figure>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="titlepage">
+                        <h2>Sản phẩm bán chạy</h2>
+                        <span>
+                            Chuyên cung cấp các loại rau củ tươi ngon.
+                        </span>
                     </div>
-                    <h3>@item.ten_san_pham</h3>
-                    <span>@item.gia</span>
-                    <p>
-                        <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
-                        <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
-                    </p>
                 </div>
             </div>
-        }*@
+            <div class="row product__lists">
+
+                @foreach (var item in ViewBag.spbc)
+                {
+                    var itemId = item.ma_san_pham;
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div id="ho_bo" class="our_products text-center">
+                            <div class="product">
+                                <figure><img src="~/Public/Images/@item.hinh_anh" alt="#" style="width: 270px; height: 210px; object-fit: cover" /></figure>
+                            </div>
+                            <h3>@item.ten_san_pham</h3>
+                            <span class="price">@String.Format("{0:#,##}", Convert.ToDecimal(item.gia))</span>
+                            <p>
+                                @if (item.so_luong > 0)
+                                {
+                                    <a class="btn btn-outline-success" href="/GioHang/AddToCart/@item.ma_san_pham">Thêm giỏ hàng</a>
+                                    <a class="btn btn-outline-success" href="/SanPham/ChiTiet/@item.ma_san_pham">Chi tiết</a>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-dark" disabled>Đã bán hết</button>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                }
 
             </div>
         </div>
@@ -253,7 +287,6 @@
 
 
     <!-- end our products -->
-    
     <!--  contact -->
     <div id="contact" class="contact">
         <div class="container">

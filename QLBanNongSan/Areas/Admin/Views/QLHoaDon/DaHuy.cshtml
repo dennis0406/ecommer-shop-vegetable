@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Đã hủy";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
+    var dem = 0;
+}
+
+<h1 class="mt-4">Đơn hàng đang giao</h1>
+
+
+<div class="card-body">
+    <table id="datatablesSimple" class="text-center">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên khách hàng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Tổng tiền</th>
+                <th>Ghi chú</th>
+                <th>Trạng thái</th>
+                <th>Nhận xét</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>STT</th>
+                <th>Tên khách hàng</th>
+                <th>Ngày đặt hàng</th>
+                <th>Tổng tiền</th>
+                <th>Ghi chú</th>
+                <th>Trạng thái</th>
+                <th>Nhận xét</th>
+            </tr>
+        </tfoot>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                dem += 1;
+
+                <tr>
+                    <td>
+                        @dem
+                    </td>
+                    @foreach (var kh in ViewBag.khachHang)
+                    {
+                        if (kh.ma_khach_hang == item.ma_khach_hang)
+                        {
+                            <td>
+                                @kh.ten_khach_hang
+                            </td>
+                        }
+
+                    }
+                    <td>
+                        @item.ngay_dat_hang
+                    </td>
+                    <td>
+                        @item.tong
+                    </td>
+                    <td>
+                        @item.ghi_chu
+                    </td>
+                    <td>
+                        @item.trang_thai
+                    </td>
+                    <td>
+                        @item.nhan_xet
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

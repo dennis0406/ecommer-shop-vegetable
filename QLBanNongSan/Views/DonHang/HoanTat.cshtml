@@ -42,7 +42,8 @@
                                     <p>Tổng tiền các đơn hàng</p>
                                 </div>
                                 <div class="col-md-4 col-lg-3">
-                                    <p class="price">@Model.tong.ToString("#,##")</p>
+                                    @{ var tongtemp = (Model.tong - ViewBag.shippingFee);} 
+                                    <p class="price">@tongtemp.ToString("#,##")</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -55,11 +56,11 @@
                             </div>
                         </div>
                         @{ 
-                            var tongtt = Model.tong + Model.phi_van_chuyen;
+                            var tongtt = Model.tong;
                         }
                         <div class="row my-4">
                             <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
-                                <p class="lead fw-bold mb-0 price" style="color: rgb(255 53 86 / 0.89);"> @tongtt.ToString("#,##")</p>
+                                <p class="lead fw-bold mb-0 price" style="color: rgb(255 53 86 / 0.89);">Tổng: @tongtt.ToString("#,##")</p>
                             </div>
                         </div>
 
@@ -97,8 +98,8 @@
         </div>*@
 
                         <p class="mt-4 pt-2 mb-0">
-                            Vui lòng thành thanh toán khi nhận hàng? <a href="#!" style="color: rgb(255 53 86 / 0.89);">
-                                Please contact us
+                            Vui lòng thành thanh toán khi nhận hàng! <a href="/#contact" style="color: rgb(255 53 86 / 0.89);">
+                                Liên hệ chúng tôi?
                             </a>
                         </p>
 
