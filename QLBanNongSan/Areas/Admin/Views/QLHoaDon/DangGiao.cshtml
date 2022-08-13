@@ -74,9 +74,19 @@
                             <ul class="dropdown-menu bg-info">
                                 @for (int i = 0; i < statuses.Length; i++)
                                 {
-                                    <li>
-                                        <a class="dropdown-item" href="/Admin/QLHoaDon/DoiTrangThai?id=@item.ma_hoa_don&status=@statuses[i]&redirect=DangGiao">@statuses[i]</a>
-                                    </li>
+
+                                    if (item.trang_thai == statuses[i])
+                                    {
+                                        <li>
+                                            <a class="dropdown-item disabled text-muted" href="/Admin/QLHoaDon/DoiTrangThai?id=@item.ma_hoa_don&status=@statuses[i]&redirect=DangGiao">@statuses[i]</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            <a class="dropdown-item" href="/Admin/QLHoaDon/DoiTrangThai?id=@item.ma_hoa_don&status=@statuses[i]&redirect=DangGiao">@statuses[i]</a>
+                                        </li>
+                                    }
                                 }
 
                             </ul>

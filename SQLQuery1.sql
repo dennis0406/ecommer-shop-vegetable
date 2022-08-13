@@ -105,6 +105,6 @@ values
 ('laple','1234','vanlap1702@gmail.com')
 
 
-select * from Hoa_don
+select * from Khach_hang
  
 

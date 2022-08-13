@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\QLBanNongSan",
-    "\\QLBanNongSan\\Controllers"
+    "\\QLBanNongSan\\Controllers",
+    "\\QLBanNongSan\\Views",
+    "\\QLBanNongSan\\Views\\TaiKhoan"
   ],
-  "SelectedNode": "\\QLBanNongSan\\Controllers\\DonHangController.cs",
+  "SelectedNode": "\\QLBanNongSan\\Views\\TaiKhoan\\LichSu.cshtml",
   "PreviewInSolutionExplorer": false
 }

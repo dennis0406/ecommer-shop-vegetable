@@ -38,7 +38,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
                     data.Loai_nong_sans.InsertOnSubmit(lns);
                     data.SubmitChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "QLLoaiSP");
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             UpdateModel(loaiNS);
             data.SubmitChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "QLLoaiSP");
 
         }
 
@@ -78,7 +78,7 @@ namespace QLBanNongSan.Areas.Admin.Controllers
 
             data.Loai_nong_sans.DeleteOnSubmit(sp);
             data.SubmitChanges();
-            return RedirectToAction("Index");
+            return Redirect("/Admin/QLLoaiSP/");
         }
     }
 }

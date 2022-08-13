@@ -27,5 +27,13 @@ namespace QLBanNongSan.Areas.Admin.Controllers
             var kh = data.Khach_hangs.ToList();
             return View(kh);
         }
+        public ActionResult ChiTiet(int id)
+        {
+            var hd = from l in data.Hoa_dons where l.ma_khach_hang == id select l;
+            var kh = from k in data.Khach_hangs where k.ma_khach_hang == id select k;
+            ViewBag.tenkh = kh.Single().ten_khach_hang;
+            var cthd = hd.ToList();
+            return View(cthd);
+        }
     }
 }

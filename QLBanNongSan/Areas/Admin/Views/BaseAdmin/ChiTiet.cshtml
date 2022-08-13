@@ -1,12 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Hoàn thành";
+    ViewBag.Title = "Chi tiết đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayout.cshtml";
     var dem = 0;
-    string[] statuses = { "processing", "shipping", "completed" };
 }
 
-<h1 class="mt-4">Đơn hàng đã hoàn thành</h1>
+<h1 class="mt-4">Các đơn hàng của khách hàng @ViewBag.tenKH </h1>
 
 
 <div class="card-body">
@@ -19,6 +18,7 @@
                 <th>Tổng tiền</th>
                 <th>Ghi chú</th>
                 <th>Trạng thái</th>
+                <th>Nhận xét</th>
             </tr>
         </thead>
         <tfoot>
@@ -29,6 +29,7 @@
                 <th>Tổng tiền</th>
                 <th>Ghi chú</th>
                 <th>Trạng thái</th>
+                <th>Nhận xét</th>
             </tr>
         </tfoot>
 
@@ -42,16 +43,9 @@
                     <td>
                         @dem
                     </td>
-                    @foreach (var kh in ViewBag.khachHang)
-                    {
-                        if (kh.ma_khach_hang == item.ma_khach_hang)
-                        {
-                            <td>
-                                @kh.ten_khach_hang
-                            </td>
-                        }
-
-                    }
+                    <td>
+                        @ViewBag.tenkh
+                    </td>
                     <td>
                         @item.ngay_dat_hang
                     </td>
@@ -64,7 +58,9 @@
                     <td>
                         @item.trang_thai
                     </td>
-                    
+                    <td>
+                        @item.nhan_xet
+                    </td>
                 </tr>
             }
         </tbody>
