@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\QLBanNongSan",
+    "\\QLBanNongSan\\Areas",
+    "\\QLBanNongSan\\Areas\\Admin",
+    "\\QLBanNongSan\\Areas\\Admin\\Controllers",
     "\\QLBanNongSan\\Controllers",
     "\\QLBanNongSan\\Views",
     "\\QLBanNongSan\\Views\\TaiKhoan"
   ],
-  "SelectedNode": "\\QLBanNongSan\\Views\\TaiKhoan\\LichSu.cshtml",
+  "SelectedNode": "\\QLBanNongSan\\Areas\\Admin\\Controllers\\BaseAdminController.cs",
   "PreviewInSolutionExplorer": false
 }
